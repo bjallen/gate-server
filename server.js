@@ -33,6 +33,10 @@ http.createServer(function(request, response) {
       });
     }
   }
+  else {
+    response.write("Page not found.");
+    response.statusCode = 404;
+  }
 
   response.end();
 
