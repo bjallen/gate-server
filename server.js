@@ -10,8 +10,8 @@ http.createServer(function(request, response) {
   }
   else if (request.url == "/run") {
     if (request.method != "POST") {
-      response.write("POST is required.");
       response.statusCode = 405;
+      response.write("POST is required.");
     }
     else {
       if (!gate) {
@@ -34,8 +34,8 @@ http.createServer(function(request, response) {
     }
   }
   else {
-    response.write("Page not found.");
     response.statusCode = 404;
+    response.write("Page not found.");
   }
 
   response.end();
